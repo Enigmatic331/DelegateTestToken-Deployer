@@ -4,6 +4,8 @@ This test allows access to an ERC20 deployed on address 0x006A9f55eC7B134C59E9cB
 
 Test defaults to 1% transfer fees, which will be calculated on top of the total token transfer sum.
 
+![alt text](https://i.imgur.com/ZL8XfRkm.png)
+
 Requires:
 1. **Private key of token holder**
    >To sign transaction being deployed so tokens are transferred from this account to another. This is meant to be ran on the client end without ever needing the private keys to be transmitted out of the client device.
@@ -21,3 +23,7 @@ Requires:
 
 4. **Deployer Private Key**
    >Private keys to the deploying address. This address will execute the signed transfer, and will require to hold some ethers to pay for gas.
+
+
+
+

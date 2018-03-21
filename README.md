@@ -22,7 +22,7 @@ Requires:
 
 
 4. **Deployer Private Key**
-   >Private keys to the deploying address. This address will execute the signed transfer, and will require to hold some ethers to pay for gas.
+   >Private keys to the deploying address. This address will execute the signed transfer, and will require to hold some ethers to pay for gas. Just use any account with some Rinkeby ethers.
 
 
 

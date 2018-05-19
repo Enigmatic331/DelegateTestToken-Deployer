@@ -27,3 +27,4 @@ Requires:
 
 
 
+Full credits to @juanfranblanco for his lovely Nethereum library (https://github.com/Nethereum/Nethereum)

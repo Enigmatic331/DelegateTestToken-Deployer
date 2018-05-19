@@ -1,6 +1,6 @@
 # DelegateTestToken-Deployer
 
-This test allows access to an ERC20 deployed on address 0x006A9f55eC7B134C59E9cBa6f5fD41cdeC1991f9, with a signed transfer function which allows function call delegation to a third party to pay for gas.
+This test allows access to an ERC20 deployed on address 0xC83E130699e721F7CdEDDCb12909BEa2cEc3D621, with a signed transfer function which allows function call delegation to a third party to pay for gas.
 
 Test defaults to 1% transfer fees, which will be calculated on top of the total token transfer sum.
 

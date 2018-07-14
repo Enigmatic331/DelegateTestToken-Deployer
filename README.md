@@ -1,16 +1,16 @@
 # DelegateTestToken-Deployer
 
-This test allows access to an ERC20 deployed on address 0xC83E130699e721F7CdEDDCb12909BEa2cEc3D621, with a signed transfer function which allows function call delegation to a third party to pay for gas.
+This test allows access to an ERC20 deployed on address 0x1a073cbe88718403c3e521494e1d0d263252ecb3, with a signed transfer function which allows function call delegation to a third party to pay for gas.
 
 Test defaults to 1% transfer fees, which will be calculated on top of the total token transfer sum.
 
 ![alt text](https://i.imgur.com/ZL8XfRkm.png)
 
 Requires:
-1. **Private key of token holder**
+1. **Private key of token holder (Token Deployed At)**
    >To sign transaction being deployed so tokens are transferred from this account to another. This is meant to be ran on the client end without ever needing the private keys to be transmitted out of the client device.
    
-   >Use token holder 0x9c51a4e541012a239a23a51ce1c53f040429981e (private key: adfc7f24351cd5519df94fe8b802650bedca6a414531efbf3363a078304abd2d) to test. This address holds tokens from 0xC83E130699e721F7CdEDDCb12909BEa2cEc3D621 but has no ethers to pay for gas.
+   > Currently the token holder is 0x794398c00aE32e62B4f3b90Fe050D32D55A59878, and the private key is embedded in the test executable (12ed9149b9202ccf46e7bdd856788cfc4e4c5b598ee445653f6bbccc7899ce84). This address holds tokens from 0x1a073cbe88718403c3e521494e1d0d263252ecb3, but has no ethers to pay for gas.
 
 
 2. **To address (where the tokens should be sent to).**

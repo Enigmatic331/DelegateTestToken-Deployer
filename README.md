@@ -4,7 +4,7 @@ This test allows access to an ERC20 deployed on address 0x1a073cbe88718403c3e521
 
 Test defaults to 1% transfer fees, which will be calculated on top of the total token transfer sum.
 
-![alt text](https://pictr.com/images/2018/07/14/tauU1.png)
+![alt text](https://pictr.com/images/2018/07/14/tauU1.md.png)
 
 Requires:
 1. **Private key of token holder (Token Deployed At)**

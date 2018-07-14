@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.24;
 
 import "./SafeMath.sol";
 
@@ -14,7 +14,7 @@ contract ERC20 {
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
 }
 
-contract delegatableTokenInterface {
+contract delegableTokenInterface {
     bytes public constant signingPrefix = "\x19Ethereum Signed Message:\n32";
     bytes4 public constant signedTransferSig = "\x75\x32\xea\xac";
 
@@ -84,7 +84,7 @@ contract StandardToken is ERC20 {
     }
 }
 
-contract delegatableToken is StandardToken, delegatableTokenInterface {
+contract delegableToken is StandardToken, delegableTokenInterface {
     mapping(address => uint) nextNonce;
 
     function getNextNonce(address _owner) public view returns (uint) {
@@ -95,11 +95,12 @@ contract delegatableToken is StandardToken, delegatableTokenInterface {
     /**
      * Prevalidation - Checks nonce value, signing account/parameter mismatch, balance sufficient for transfer 
      */    
-    function signedTransferCheck(address from, address to, uint transferAmount, uint fee, uint nonce, bytes sig, address feeAccount) public view returns (string result) {
+    function signedTransferCheck(address from, address to, uint transferAmount, uint fee,
+                                    uint nonce, bytes sig, address feeAccount) public view returns (string result) {
         bytes32 hash = signedTransferHash(from, to, transferAmount, fee, nonce);
         if (nextNonce[from] != nonce)
             return "Nonce does not match.";
-        if (from == address(0) || from != ecrecoverFromSig(keccak256(signingPrefix, hash), sig))
+        if (from == address(0) || from != ecrecoverFromSig(keccak256(abi.encodePacked(signingPrefix, hash)), sig))
             return "Mismatch in signing account or parameter mismatch.";
         if (transferAmount > balances[from])
             return "Transfer amount exceeds token balance on address.";
@@ -132,8 +133,10 @@ contract delegatableToken is StandardToken, delegatableTokenInterface {
             // There is no 'mload8' to do this, but that would be nicer.
             v := byte(0, mload(add(sig, 96)))
         }
-        // Albeit non-transactional signatures are not specified by the YP, one would expect it to match the YP range of [27, 28]
-        // geth uses [0, 1] and some clients have followed. This might change, see https://github.com/ethereum/go-ethereum/issues/2053
+        // Albeit non-transactional signatures are not specified by the YP,
+        // one would expect it to match the YP range of [27, 28]
+        // geth uses [0, 1] and some clients have followed. This might change,
+        // see https://github.com/ethereum/go-ethereum/issues/2053
         if (v < 27) {
           v += 27;
         }
@@ -145,17 +148,21 @@ contract delegatableToken is StandardToken, delegatableTokenInterface {
     /**
      * Creates keccak256 hash of sent parameters
      */    
-    function signedTransferHash(address from, address to, uint transferAmount, uint fee, uint nonce) public view returns (bytes32 hash) {
-        hash = keccak256(signedTransferSig, address(this), from, to, transferAmount, fee, nonce);
+    function signedTransferHash(address from, address to, uint transferAmount, uint fee,
+                                    uint nonce) public view returns (bytes32 hash) {
+        hash = keccak256(
+            abi.encodePacked(signedTransferSig, address(this), from, to, transferAmount, fee, nonce)
+                        );
     }
 
     /**
      * executes signedTransfer, allowing tokens to be sent through a delegate
      */    
-    function signedTransfer(address from, address to, uint transferAmount, uint fee, uint nonce, bytes sig, address feeAccount) public returns (bool success) {
+    function signedTransfer(address from, address to, uint transferAmount, uint fee,
+                            uint nonce, bytes sig, address feeAccount) public returns (bool success) {
         bytes32 hash = signedTransferHash(from, to, transferAmount, fee, nonce);
         // verifies if signature is indeed signed by owner, and with the same values
-        require(from != address(0) && from == ecrecoverFromSig(keccak256(signingPrefix, hash), sig));
+        require(from != address(0) && from == ecrecoverFromSig(keccak256(abi.encodePacked(signingPrefix, hash)), sig));
         require(nextNonce[from] == nonce);
 
         // update nonce
@@ -176,7 +183,7 @@ contract delegatableToken is StandardToken, delegatableTokenInterface {
 
 
 //token contract
-contract TestDelegateToken is delegatableToken, Owned {
+contract TestDelegateToken is delegableToken, Owned {
     
     event Burn(address indexed burner, uint256 value);
     
@@ -189,8 +196,8 @@ contract TestDelegateToken is delegatableToken, Owned {
     bool public isTransferable = false;
     
 
-    function TestDelegateToken() {
-        name = "Test Delegate Token v0.02";                          
+    constructor() public {
+        name = "Test Delegate Token v0.03";                          
         decimals = 18; 
         symbol = "TDELT";
         totalSupply = 1000000000 * 10 ** uint256(decimals); 
@@ -201,7 +208,8 @@ contract TestDelegateToken is delegatableToken, Owned {
         emit Transfer(0x0, msg.sender, totalSupply);
     }
 
-    function signedTransfer(address tokenOwner, address to, uint tokens, uint fee, uint nonce, bytes sig, address feeAccount) public returns (bool success) {
+    function signedTransfer(address tokenOwner, address to, uint tokens, uint fee, uint nonce, bytes sig,
+                            address feeAccount) public returns (bool success) {
         require(isTransferable);
         return super.signedTransfer(tokenOwner, to, tokens, fee, nonce, sig, feeAccount);
     }

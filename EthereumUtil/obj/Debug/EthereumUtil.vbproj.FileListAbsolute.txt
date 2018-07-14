@@ -15,3 +15,4 @@ D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\Ethereum
 D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.xml
 D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.pdb
 D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.vbprojResolveAssemblyReference.cache
+D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.vbproj.CopyComplete

@@ -26,7 +26,7 @@ Requires:
 4. **Deployer Private Key**
    >Private keys to the deploying address. This address will execute the signed transfer, and will require to hold some ethers to pay for gas. Just use any account with some Rinkeby ethers.
    
-   >In return for the incurred gas cost, 1% of the transferred token sum is calculated and sent to the deploying address, which acts as a deployment fee. This is specified within the smart contract.
+   >In return for the incurred gas cost, 1% of the transferred token sum is calculated and sent to the deploying address, which acts as a deployment fee. This is specified within the test executable. With enough traction, a form of deployer marketplace is possible.
 
 
 

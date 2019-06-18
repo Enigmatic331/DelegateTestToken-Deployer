@@ -14,5 +14,29 @@ D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\Ethereum
 D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.exe
 D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.xml
 D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.pdb
-D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.vbprojResolveAssemblyReference.cache
 D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.vbproj.CopyComplete
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\EthereumUtil.exe.config
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\EthereumUtil.exe
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\EthereumUtil.pdb
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\EthereumUtil.xml
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\BouncyCastle.Crypto.dll
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\Common.Logging.Core.dll
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\Nethereum.Portable.dll
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\Newtonsoft.Json.dll
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\BouncyCastle.Crypto.xml
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\Common.Logging.Core.pdb
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\Common.Logging.Core.xml
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\bin\Debug\Newtonsoft.Json.xml
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.vbprojAssemblyReference.cache
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.MainForm.resources
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.Resources.resources
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.vbproj.GenerateResource.cache
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.vbproj.CoreCompileInputs.cache
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.vbproj.CopyComplete
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.exe
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.xml
+D:\Random Coding\ERC20 with DelegateTransfer - Update\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.pdb
+D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\bin\Debug\Common.Logging.Core.dll
+D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\bin\Debug\Common.Logging.Core.pdb
+D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\bin\Debug\Common.Logging.Core.xml
+D:\Random Coding\ERC20 with DelegateTransfer\DelegateTestToken Deployer\EthereumUtil\obj\Debug\EthereumUtil.vbprojAssemblyReference.cache

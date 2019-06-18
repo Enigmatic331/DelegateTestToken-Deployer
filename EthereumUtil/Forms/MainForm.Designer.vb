@@ -130,7 +130,7 @@ Partial Class MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(587, 663)
+        Me.ClientSize = New System.Drawing.Size(587, 654)
         Me.Controls.Add(Me.txtDeployedAt)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtDeployPrivKey)
